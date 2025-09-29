@@ -1,0 +1,20 @@
+{
+	"spinnerTipsEnabled": false,
+	"permissions": {
+		"allow": [
+			"Bash(git:*)",
+			"Bash(go:*)",
+			"Bash(find:*)",
+			"Bash(docker:*)",
+			"Bash(curl:*)",
+			"Bash(unzip:*)",
+			"Bash(az:*)",
+			"Bash(gh:*)",
+			"Edit",
+			"MultiEdit",
+			"Write",
+			"WebSearch",
+			"WebFetch"
+		]
+	}
+}
