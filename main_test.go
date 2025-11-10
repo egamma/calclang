@@ -13,6 +13,8 @@ func TestParse(t *testing.T) {
 	}{
 		{"ADD 1 2", Add{Val{1}, Val{2}}},
 		{"SUB 1 2", Sub{Val{1}, Val{2}}},
+		{"MUL 3 4", Mul{Val{3}, Val{4}}},
+		{"DIV 10 2", Div{Val{10}, Val{2}}},
 	}
 
 	for _, tc := range tests {
