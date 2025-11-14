@@ -28,6 +28,24 @@ type Sub struct {
 	right Val
 }
 
+// Mul represents a multiplication operation with two values
+type Mul struct {
+	left  Val
+	right Val
+}
+
+// Div represents a division operation with two values
+type Div struct {
+	left  Val
+	right Val
+}
+
+// Mod represents a modulo operation with two values
+type Mod struct {
+	left  Val
+	right Val
+}
+
 // Eval evaluates an AST node and returns its result
 func Eval(ast AST) int {
 	switch node := ast.(type) {
@@ -35,6 +53,12 @@ func Eval(ast AST) int {
 		return node.left.value + node.right.value
 	case Sub:
 		return node.left.value - node.right.value
+	case Mul:
+		return node.left.value * node.right.value
+	case Div:
+		return node.left.value / node.right.value
+	case Mod:
+		return node.left.value % node.right.value
 	case Val:
 		return node.value
 	default:
@@ -53,6 +77,12 @@ func Parse(input string) AST {
 		return Add{Val{left}, Val{right}}
 	case "SUB":
 		return Sub{Val{left}, Val{right}}
+	case "MUL":
+		return Mul{Val{left}, Val{right}}
+	case "DIV":
+		return Div{Val{left}, Val{right}}
+	case "MOD":
+		return Mod{Val{left}, Val{right}}
 	default:
 		return nil
 	}
