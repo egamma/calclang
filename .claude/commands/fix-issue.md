@@ -21,5 +21,3 @@ Use Test-Driven Development:
    IMPORTANT: Always start by writing a unit test (not an integration or E2E test).
 2. Write minimal code to pass test
 3. Refactor while keeping tests green
-
-Run `npm run test:watch` during development and `npm run quality:strict` before committing.
