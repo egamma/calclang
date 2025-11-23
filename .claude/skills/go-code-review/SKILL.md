@@ -1,20 +1,21 @@
 ---
 name: go-code-review
 description: Review Go code for best practices, idiomatic patterns, error handling, testing, performance, and security issues. Use when asked to review Go files, check code quality, or suggest improvements for Go code.
-allowed-tools:
-  - Read
-  - Glob
-  - Grep
-  - Bash
+allowed-tools: Read, Glob, Grep, Bash
 ---
 
 # Go Code Review Skill
 
 You are a Go code review expert. When this skill is activated, perform a thorough code review of Go files.
 
-## Review Checklist
+## Mandatory Checklist Usage
 
-Refer to [CHECKLIST.md](CHECKLIST.md) for the comprehensive review checklist covering:
+- **Step 1:** Read the full ./CHECKLIST.md file before beginning the review.
+- **Step 2:** At the start of your output, confirm: “CHECKLIST.md has been reviewed.”
+- **Step 3:** For each review section, explicitly reference which ./CHECKLIST.md item(s) your comment addresses.
+- **Step 4:** In the final report, include a summary mapping review findings to specific ./CHECKLIST.md items.
+
+This checklist covers:
 1. Code Quality & Idiomatic Go
 2. Error Handling
 3. Concurrency & Safety
@@ -36,8 +37,8 @@ Include file paths and line numbers for all findings (e.g., `main.go:48`).
 
 ## Process
 
-1. Identify Go files to review (ask user if not specified)
-2. Read and analyze the code
+1. Identify all the Go files in the project to review (ask user if not specified)
+2. Read and analyze the code using the CHECKLIST.md
 3. Run `go vet` to detect suspicious constructs and potential bugs
    - Execute `go vet ./...` or target specific packages
    - Parse and categorize vet findings by severity
@@ -57,7 +58,7 @@ When this skill is invoked, follow this automated workflow:
 
 2. **Analysis Phase**
    - Read target Go files using the Read tool
-   - Perform static code analysis against the Review Checklist
+   - Perform static code analysis use the CHECKLIST.md
    - Note patterns, anti-patterns, and areas of concern
 
 3. **Tool Execution Phase**

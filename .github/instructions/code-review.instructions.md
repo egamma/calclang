@@ -1,11 +1,6 @@
 ---
-description: 'Review Go code for best practices, idiomatic patterns, error handling, testing, performance, and security'
-name: 'go-code-review'
-agent: 'agent'
-model: 'Claude Sonnet 4'
-tools: ['runCommands/runInTerminal', 'search/readFile', 'search/codebase']
+description: Instructions to follow when doing a code review for Go and review for best practices, idiomatic patterns, error handling, testing, performance, and security issues. Use when asked to review Go files, check code quality, or suggest improvements for Go code.
 ---
-
 # Go Code Review
 
 You are a Go code review expert. Perform a thorough code review of Go files.
